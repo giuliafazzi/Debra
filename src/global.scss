@@ -1,22 +1,10 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +12,192 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  border: none;
+}
+
+ion-content {
+  min-height: 100%;
+}
+
+/*
+    ESTILOS E TEXTURAS
+    (fundos, padrões...)
+*/
+
+.fundoRoxo {
+  background-color: #9024a3;
+  color: #ffffff;
+}
+
+.fundoBranco {
+  background-color: #ffffff;
+  color: #9024a3;
+}
+
+.fundoCinza {
+  background-color: #f7f7f7;
+  color: #4f4f4f;
+}
+
+#homeRoxo,
+#logoDebra {
+  width: 100%;
+  height: 80%;
+}
+
+#homeBranco {
+  width: 100%;
+  height: 20%;
+}
+
+/*
+    ESTRUTURA
+    (header, title, card...)
+*/
+ion-header,
+ion-toolbar {
+  background-color: #9024a3;
+}
+
+ion-title,
+.toolbar-title {
+  background-color: #9024a3;
+  color: #ffffff;
+}
+
+ion-card {
+  padding: 40px 30px 40px 30px;
+  border-radius: 1em !important;
+  white-space: normal;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/*
+    ALINHAMENTO
+    (alinhamento de divs)
+*/
+.direita {
+  align-content: right;
+  text-align: right !important;
+}
+
+.esquerda {
+  align-content: left;
+  text-align: left !important;
+}
+
+.vertical-align-content > * {
+  display: flex !important;
+  align-content: center !important;
+  align-items: center !important;
+  vertical-align: center !important;
+}
+
+/* 
+    FORMULÁRIOS
+    (botões, caixas de texto, checkbox...)
+*/
+.list-ios > .item-block:last-child,
+.list-ios > .item-wrapper:last-child .item-block {
+  border: none;
+}
+
+.item-ios.item-block .item-inner {
+  border: none;
+}
+
+.frm {
+  border: 1px solid #c9c9c9;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 15px 10px 15px;
+  width: 90%;
+  box-shadow: none;
+}
+
+.btnBranco {
+  background-color: #ffffff;
+  border: 2px solid #9024a3;
+  color: #9024a3;
+}
+
+.btnRoxo {
+  background-color: #9024a3;
+  border: 2px solid #9024a3;
+  color: #ffffff;
+}
+
+.btnForm {
+  margin-top: 30px;
+}
+
+.btnNav {
+  color: #ffffff;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* 
+    TEXTOS
+    (parágrafos, headers...)
+*/
+
+h4 {
+  font-weight: 400;
+  color: #4f4f4f;
+  font-size: 22px;
+  margin: 10% 20% 5% 20%;
+}
+
+.info {
+  font-size: 14px;
+  color: #8c8c8c;
+  margin-top: 5px;
+}
+
+.sub {
+  font-size: 18px;
+  color: #8c8c8c;
+  margin-top: 2px;
+}
+
+.card-title {
+  font-size: 20px !important;
+  color: #4f4f4f !important;
+}
+
+.card-subtitle {
+  font-size: 14px !important;
+  color: #8c8c8c !important;
+}
+
+.nomeProf {
+  font-size: 16px !important;
+}
+
+.textoPost {
+  font-size: 18px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+#nomeAluno {
+  margin-bottom: 2px;
+}
