@@ -1,14 +1,23 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+  <ion-grid class="vertical-align-content fundoRoxo" id="homeRoxo">
+    <ion-row center id="logoDebra">
+      <ion-col>
+        <h1 no-padding no-margin>debra</h1>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="vertical-align-content fundoBranco" id="homeBranco">
+    <ion-row center id="botoes">
+      <ion-col>
+        <button ion-button routerLink="/login" class="btn btnBranco">
+          Entrar
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button routerLink="/cadastro" class="btn btnRoxo">
+          Cadastrar-se
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
