@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start routerLink="/home">
+      <button ion-button icon-only class="btnNav">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Cadastrar-se
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4>Insira seus dados para se cadastrar no sistema</h4>
+
+  <ion-item>
+    <ion-input [(ngModel)]="name" placeholder="Nome*" class="frm"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      [(ngModel)]="username"
+      placeholder="E-mail*"
+      class="frm"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      class="frm"
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Senha*"
+    ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      class="frm"
+      type="password"
+      [(ngModel)]="password"
+      placeholder="Repita sua senha*"
+    ></ion-input>
+  </ion-item>
+
+  <button ion-button class="btn btnRoxo btnForm" routerLink="/escolas">
+    Cadastre-se
+  </button>
+</ion-content>

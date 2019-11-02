@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons start routerLink="/escolas">
+      <button ion-button icon-only class="btnNav">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>
+      Alunos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-input placeholder="Procurar" class="frm"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-item routerLink="/perfilaluno">
+      <ion-label>Toggle</ion-label>
+      <ion-icon name="arrow-back" id="vai"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
