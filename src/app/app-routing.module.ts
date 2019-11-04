@@ -38,7 +38,11 @@ const routes: Routes = [
     path: "evolucao",
     loadChildren: () =>
       import("./evolucao/evolucao.module").then(m => m.EvolucaoPageModule)
-  }
+  },
+  { path: 'publicacao', loadChildren: './publicacao/publicacao.module#PublicacaoPageModule' },
+  { path: 'infos', loadChildren: './infos/infos.module#InfosPageModule' },
+  { path: 'addescolas', loadChildren: './addescolas/addescolas.module#AddescolasPageModule' },
+  { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' }
 ];
 
 @NgModule({

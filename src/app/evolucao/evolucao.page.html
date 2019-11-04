@@ -1,19 +1,21 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons start routerLink="/perfilaluno">
-      <button ion-button icon-only class="btnNav">
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
-    </ion-buttons>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
 
     <ion-title>
-      Evolução Escolar
+      Evolução
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<!-- FALTA COLOCAR BOTÃO NO CANTO INFERIOR DIREITO PARA ADD POST -->
+
 <ion-content class="fundoCinza">
+    
+    <ion-buttons slot="fixed" class="adicionar" routerLink="/categorias">+</ion-buttons>
+      
+    
   <h4>Atividades executadas:</h4>
 
   <!-- FALTA ALINHAR À ESQUERDA -->
@@ -31,13 +33,35 @@
           tincidunt libero. Fusce vel lorem.
         </h3>
         <hr />
-        <div>
           <!-- INSERIR ÍCONES DE CATEGORIA -->
           <!-- SE FOR UM POST FAVORITADO: ios-star -->
           <!-- SE NÃO FOR UM POST FAVORITADO: ios-star-outline -->
-          <ion-icon name="ios-star-outline"></ion-icon>
-        </div>
+          
       </ion-card>
     </ion-item>
   </ion-list>
+  
+
+  <h4>Aprende melhor com:</h4>
+  <ion-list>
+    <ion-item class="fundoCinza">
+      <ion-card>
+        <h3 class="card-title nomeProf">
+          Maria Rosa Almeida
+        </h3>
+        <h2 class="card-subtitle">
+          23/08/18
+        </h2>
+        <h3 class="card-title textoPost">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
+          tincidunt libero. Fusce vel lorem.
+        </h3>
+        <hr />
+          
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+  
+
 </ion-content>
