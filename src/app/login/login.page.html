@@ -1,9 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons start routerLink="/home">
-      <button ion-button icon-only class="btnNav">
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
 
     <ion-title>
@@ -15,22 +13,18 @@
 <ion-content>
   <h4>Insira seus dados para entrar no sistema</h4>
 
-  <ion-item>
-    <ion-input
-      [(ngModel)]="username"
-      placeholder="E-mail*"
-      class="frm"
-    ></ion-input>
-  </ion-item>
+  <ion-input
+    [(ngModel)]="username"
+    placeholder="E-mail*"
+    class="frm"
+  ></ion-input>
 
-  <ion-item>
-    <ion-input
-      class="frm"
-      type="password"
-      [(ngModel)]="password"
-      placeholder="Senha*"
-    ></ion-input>
-  </ion-item>
+  <ion-input
+    class="frm"
+    type="password"
+    [(ngModel)]="password"
+    placeholder="Senha*"
+  ></ion-input>
 
   <button ion-button class="btn btnRoxo btnForm" routerLink="/escolas">
     Entrar

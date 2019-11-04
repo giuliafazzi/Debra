@@ -3,7 +3,8 @@ import { Router } from "@angular/router";
 
 @Component({
   selector: "app-evolucao",
-  templateUrl: "evolucao.page.html"
+  templateUrl: "evolucao.page.html",
+  styleUrls: ["evolucao.page.scss"]
 })
 export class EvolucaoPage {
   constructor(private router: Router) {}

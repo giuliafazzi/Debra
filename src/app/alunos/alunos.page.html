@@ -1,9 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons start routerLink="/escolas">
-      <button ion-button icon-only class="btnNav">
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
 
     <ion-title>
@@ -19,8 +17,19 @@
 
   <ion-list>
     <ion-item routerLink="/perfilaluno">
-      <ion-label>Toggle</ion-label>
-      <ion-icon name="arrow-back" id="vai"></ion-icon>
+      <ion-label>Aluno 1</ion-label>
+    </ion-item>
+    <ion-item routerLink="/perfilaluno">
+      <ion-label>Aluno 2</ion-label>
+    </ion-item>
+    <ion-item routerLink="/perfilaluno">
+      <ion-label>Aluno 3</ion-label>
+    </ion-item>
+    <ion-item routerLink="/perfilaluno">
+      <ion-label>Aluno 4</ion-label>
+    </ion-item>
+    <ion-item routerLink="/perfilaluno">
+      <ion-label>Aluno 5</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

@@ -1,9 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons start>
-      <button ion-button icon-only class="btnNav">
-        <ion-icon name="menu"></ion-icon>
-      </button>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
 
     <ion-title>
@@ -11,15 +9,14 @@
     </ion-title>
 
     <!-- IDEIA: COLOCAR UM BOTÃO REDONDO COMO NA TELA DE POSTS -->
-    <ion-buttons end>
-      <button ion-button icon-only class="btnNav">
-        <ion-icon name="ios-add"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="fundoCinza">
+  <ion-buttons slot="fixed" class="adicionar" routerLink="/addescolas"
+    >+</ion-buttons
+  >
+
   <ion-list>
     <ion-item class="fundoCinza" routerLink="/alunos">
       <ion-card>
@@ -32,7 +29,7 @@
       </ion-card>
     </ion-item>
 
-    <ion-item class="fundoCinza">
+    <ion-item class="fundoCinza" routerLink="/alunos">
       <ion-card>
         <h3 class="card-title">
           Escola Municipal João Francisco Rosa
@@ -44,3 +41,5 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+Escola Estadual Professora Julia Rios Athayde
