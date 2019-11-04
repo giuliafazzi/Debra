@@ -5,7 +5,6 @@ import { Router } from "@angular/router";
   selector: "app-escolas",
   templateUrl: "escolas.page.html",
   styleUrls: ["escolas.page.scss"]
-
 })
 export class EscolasPage {
   constructor(private router: Router) {}
@@ -14,4 +13,3 @@ export class EscolasPage {
     this.router.navigateByUrl("/alunos");
   }
 }
-
