@@ -1,9 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons start>
-      <button ion-button icon-only class="btnNav" routerLink="/alunos">
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
 
     <ion-title>
@@ -17,7 +15,7 @@
   <p class="sub">Aluno com dislexia</p>
   <p class="info">Idade: 11 anos | Turma: 6º A</p>
 
-  <button ion-button class="btn btnBranco btnForm">
+  <button ion-button class="btn btnBranco btnForm" routerLink="/infos">
     Informações gerais
   </button>
 

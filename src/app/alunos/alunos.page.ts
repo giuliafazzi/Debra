@@ -3,7 +3,8 @@ import { Router } from "@angular/router";
 
 @Component({
   selector: "app-alunos",
-  templateUrl: "alunos.page.html"
+  templateUrl: "alunos.page.html",
+  styleUrls: ["alunos.page.scss"]
 })
 export class AlunosPage {
   constructor(private router: Router) {}
