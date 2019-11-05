@@ -42,7 +42,8 @@ const routes: Routes = [
   { path: 'publicacao', loadChildren: './publicacao/publicacao.module#PublicacaoPageModule' },
   { path: 'infos', loadChildren: './infos/infos.module#InfosPageModule' },
   { path: 'addescolas', loadChildren: './addescolas/addescolas.module#AddescolasPageModule' },
-  { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' }
+  { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
+  { path: 'esqueceusenha', loadChildren: './esqueceusenha/esqueceusenha.module#EsqueceusenhaPageModule' }
 ];
 
 @NgModule({
