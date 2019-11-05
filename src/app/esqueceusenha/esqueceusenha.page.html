@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+        </ion-buttons>
+    <ion-title>Esqueci senha</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <h4>Insira o seu e-mail para redefinir a senha</h4>
+
+  
+    <ion-input
+      [(ngModel)]="username"
+      placeholder="E-mail"
+      class="frm"
+    ></ion-input>
+    <button ion-button class="btn btnRoxo btnForm">
+        Enviar
+      </button>
+
+</ion-content>
