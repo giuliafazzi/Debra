@@ -20,17 +20,16 @@
 
   <!-- FALTA ALINHAR À ESQUERDA -->
   <ion-list>
-    <ion-item class="fundoCinza">
+    <ion-item *ngFor="let pub of publi_cat_atv" class="fundoCinza">
       <ion-card>
         <h3 class="card-title nomeProf">
           Maria Rosa Almeida
         </h3>
         <h2 class="card-subtitle">
-          23/08/18
+          {{pub.createdAt}}
         </h2>
         <h3 class="card-title textoPost">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-          tincidunt libero. Fusce vel lorem.
+          {{pub.content}}
         </h3>
         <hr />
           <!-- INSERIR ÍCONES DE CATEGORIA -->
@@ -44,17 +43,16 @@
 
   <h4>Aprende melhor com:</h4>
   <ion-list>
-    <ion-item class="fundoCinza">
+    <ion-item *ngFor="let pub of publi_cat_aprende" class="fundoCinza">
       <ion-card>
         <h3 class="card-title nomeProf">
           Maria Rosa Almeida
         </h3>
         <h2 class="card-subtitle">
-          23/08/18
+          {{pub.createdAt}}
         </h2>
         <h3 class="card-title textoPost">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-          tincidunt libero. Fusce vel lorem.
+          {{pub.content}}
         </h3>
         <hr />
           

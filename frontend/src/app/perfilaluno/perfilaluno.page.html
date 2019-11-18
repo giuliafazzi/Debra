@@ -11,15 +11,15 @@
 </ion-header>
 
 <ion-content>
-  <h4 id="nomeAluno">Luis Paulino Xavier</h4>
-  <p class="sub">Aluno com dislexia</p>
-  <p class="info">Idade: 11 anos | Turma: 6º A</p>
+  <h4 id="nomeAluno" (ngModel)="aluno?.name">{{aluno?.name}}</h4>
+  <p class="sub" (ngModel)="aluno?.disability">Aluno com {{aluno?.disability}}</p>
+  <p class="info" (ngModel)="aluno?.age">Idade: {{aluno?.age}} anos | Turma: {{aluno?.class.year}}º {{aluno?.class.letter}}</p>
 
-  <button ion-button class="btn btnBranco btnForm" routerLink="/infos">
+  <button ion-button class="btn btnBranco btnForm" routerLink="/escolas/{{escola_id}}/alunos/{{aluno_id}}/infos">
     Informações gerais
   </button>
 
-  <button ion-button class="btn btnRoxo" routerLink="/evolucao">
+  <button ion-button class="btn btnRoxo" routerLink="/escolas/{{escola_id}}/alunos/{{aluno_id}}/evolucao">
     Evolução escolar
   </button>
 </ion-content>

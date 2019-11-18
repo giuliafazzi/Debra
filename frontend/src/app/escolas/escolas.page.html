@@ -17,24 +17,13 @@
     <ion-buttons slot="fixed" class="adicionar" routerLink="/addescolas">+</ion-buttons>
 
   <ion-list>
-    <ion-item class="fundoCinza" routerLink="/alunos">
+    <ion-item *ngFor="let esc of escolas" class="fundoCinza" routerLink="/escolas/{{esc.id}}/alunos">
       <ion-card>
         <h3 class="card-title">
-          Escola Estadual Professora Julia Rios Athayde
+          {{esc.name}}
         </h3>
         <h2 class="card-subtitle">
-          Sorocaba/SP
-        </h2>
-      </ion-card>
-    </ion-item>
-
-    <ion-item class="fundoCinza" routerLink="/alunos">
-      <ion-card>
-        <h3 class="card-title">
-          Escola Municipal João Francisco Rosa
-        </h3>
-        <h2 class="card-subtitle">
-          Sorocaba/SP
+          {{esc.city}}/{{esc.state}}
         </h2>
       </ion-card>
     </ion-item>

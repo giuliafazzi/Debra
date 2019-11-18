@@ -37,7 +37,9 @@ module.exports = {
     async show(req, res) {
         const { school_id, student_id } = req.params;
 
-        const student = await Student.findByPk(student_id);
+        const student = await Student.findByPk(student_id, {
+            include: { association: 'class', attributes: ['year', 'letter'] }
+        });
         
         if (!student) {
             return res.status(404).json({ error: 'Student not found' });

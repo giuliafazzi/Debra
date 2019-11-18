@@ -1,13 +1,23 @@
-import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { RestApiService } from '../rest-api.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: "app-alunos",
   templateUrl: "alunos.page.html",
   styleUrls: ["alunos.page.scss"]
 })
+
+
 export class AlunosPage {
-  constructor(private router: Router) {}
+  alunos: any;
+  escola_id: string = this.route.snapshot.paramMap.get('escola_id');
+
+  constructor(public api: RestApiService, 
+    public loadingController: LoadingController, 
+    public route: ActivatedRoute,
+    public router: Router) {}
 
   escolas() {
     this.router.navigateByUrl("/escolas");
@@ -15,5 +25,23 @@ export class AlunosPage {
 
   perfilaluno() {
     this.router.navigateByUrl("/perfilaluno");
+  }
+
+  async getStudents() {
+    const loading = await this.loadingController.create();
+    await loading.present();
+    await this.api.getStudents(this.escola_id)
+      .subscribe(res => {
+        console.log(res);
+        this.alunos = res;
+        loading.dismiss();
+      }, err => {
+        console.log(err);
+        loading.dismiss();
+      });
+  }
+
+  ngOnInit() {
+    this.getStudents();
   }
 }

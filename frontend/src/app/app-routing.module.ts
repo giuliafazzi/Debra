@@ -23,24 +23,24 @@ const routes: Routes = [
       import("./escolas/escolas.module").then(m => m.EscolasPageModule)
   },
   {
-    path: "alunos",
+    path: "escolas/:escola_id/alunos",
     loadChildren: () =>
       import("./alunos/alunos.module").then(m => m.AlunosPageModule)
   },
   {
-    path: "perfilaluno",
+    path: "escolas/:escola_id/alunos/:aluno_id",
     loadChildren: () =>
       import("./perfilaluno/perfilaluno.module").then(
         m => m.PerfilAlunoPageModule
       )
   },
   {
-    path: "evolucao",
+    path: "escolas/:escola_id/alunos/:aluno_id/evolucao",
     loadChildren: () =>
       import("./evolucao/evolucao.module").then(m => m.EvolucaoPageModule)
   },
   { path: 'publicacao', loadChildren: './publicacao/publicacao.module#PublicacaoPageModule' },
-  { path: 'infos', loadChildren: './infos/infos.module#InfosPageModule' },
+  { path: 'escolas/:escola_id/alunos/:aluno_id/infos', loadChildren: './infos/infos.module#InfosPageModule' },
   { path: 'addescolas', loadChildren: './addescolas/addescolas.module#AddescolasPageModule' },
   { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
   { path: 'esqueceusenha', loadChildren: './esqueceusenha/esqueceusenha.module#EsqueceusenhaPageModule' }

@@ -9,14 +9,16 @@
 
 <ion-content>
 
-    <h4 id="nomeAluno">Luis Paulino Xavier</h4>
-  <p class="sub">Aluno com dislexia</p>
-  <p class="info">Idade: 11 anos | Turma: 6º A</p>
-  <h6>Observações:</h6>
-
-  <p class="obs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
-      tincidunt libero. Fusce vel lorem.</p>
+  <h4 id="nomeAluno" (ngModel)="aluno?.name">{{aluno?.name}}</h4>
+  <p class="sub" (ngModel)="aluno?.disability">Aluno com {{aluno?.disability}}</p>
+  <p class="info" (ngModel)="aluno?.age">Idade: {{aluno?.age}} anos | Turma: {{aluno?.class.year}}º {{aluno?.class.letter}}</p>
+  
+  
+  <h6 (ngModel)="aluno?.comments">Observações:</h6>
+  <p class="obs" (ngModel)="aluno?.comments">{{aluno?.comments}}</p>
+  
   <h6>Laudo Médico:</h6>
+  <p class="obs" (ngModel)="aluno?.medical_report">{{aluno?.medical_report}}</p>
   
 
 </ion-content>
