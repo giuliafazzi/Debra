@@ -1,8 +1,8 @@
 # Backend
 ## Dependências
-### Docker e Docker Compose:
-Todo o backend foi containerizado utilizando o Docker e Docker Compose.
-Para instalar o Docker e o Docker Compose siga as instruções abaixo.
+### Docker e Docker Compose
+Todo o backend foi containerizado utilizando Docker e Docker Compose.
+Para instalá-los, siga as instruções abaixo.
 
 #### Linux (Ubuntu e derivados)
 - Faça o download do script de instalação do Docker Engine
@@ -29,7 +29,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-
 ```
 sudo docker-compose -f docker-compose-startdb.yml run --rm node
 ```
-- Agora sempre que quiser executar a aplicação, basta usar o comando:
+- Agora, sempre que quiser executar a aplicação basta usar o comando:
 ```
 sudo docker-compose up
 ```
@@ -37,7 +37,10 @@ Ou, para executar em background:
 ```
 sudo docker-compose up -d
 ```
-Quando executado em background, utilize o seguinte comando para interromper a execução:
+Quando executada em background, utilize o seguinte comando para interromper a execução:
 ```
 sudo docker-compose stop
 ```
+
+
+*O banco de dados também ficará acessível em: postgres://\<user\>:\<pass\>@localhost:25432/debra*
