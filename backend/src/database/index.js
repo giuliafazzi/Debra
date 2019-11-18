@@ -1,13 +1,13 @@
 const Sequelize = require('sequelize');
 const dbConfig = require('../config/database');
 
+const conn = new Sequelize(dbConfig);
+
 // models
 const Student = require('../models/Student');
 const School = require('../models/School');
 const Class = require('../models/Class');
 const Post = require('../models/Post');
-
-const conn = new Sequelize(dbConfig);
 
 Student.init(conn);
 School.init(conn);
