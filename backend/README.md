@@ -43,4 +43,4 @@ sudo docker-compose stop
 ```
 
 
-O banco de dados também ficará acessível em: *postgres://\<user\>:\<pass\>@localhost:25432/debra*.
+*O banco de dados também ficará acessível em: postgres://\<user\>:\<pass\>@localhost:25432/debra*
