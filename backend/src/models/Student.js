@@ -6,10 +6,7 @@ class Student extends Model {
             name: DataTypes.STRING,
             disability: DataTypes.STRING,
             age: DataTypes.INTEGER,
-            comments:{ 
-                type: DataTypes.STRING,
-                defaultValue: '',
-            },
+            comments: DataTypes.STRING,
             medical_report: {
                 type: DataTypes.STRING,
                 defaultValue: 'Não possui',

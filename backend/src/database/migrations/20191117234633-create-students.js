@@ -23,7 +23,7 @@ module.exports = {
         },
         class_id: {
           type: Sequelize.INTEGER,
-          allowNull: true,
+          allowNull: false,
           references: { model: 'classes', key: 'id' },
           onUpdate: 'CASCADE',
           onDelete: 'SET NULL',
@@ -34,7 +34,7 @@ module.exports = {
         },
         medical_report: {
           type: Sequelize.STRING,
-          allowNull: true,
+          allowNull: false,
         },
         created_at: {
           type: Sequelize.DATE,
