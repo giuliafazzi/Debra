@@ -4,8 +4,11 @@ const categories = require('../config/categories');
 
 module.exports = {
     async store(req, res) {
-        const { content, category} = req.body;
+        const { content } = req.body;
+        let { category } = req.body;
         const { student_id, school_id } = req.params;
+
+        category = category.toLowerCase();
 
         const student = await Student.findByPk(student_id);
 
@@ -41,7 +44,10 @@ module.exports = {
     },
 
     async indexByCategory(req, res) {
-        const { student_id, school_id, category } = req.params;
+        const { student_id, school_id } = req.params;
+        let { category } = req.params;
+
+        category = category.toLowerCase();
 
         if (!categories.includes(category)) {
             return res.status(400).json({ error: `Category must be one of these values: [${categories}]` });
