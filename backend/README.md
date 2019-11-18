@@ -1,8 +1,8 @@
 # Backend
 ## Dependências
-### Docker e Docker Compose:
-Todo o backend foi containerizado utilizando o Docker e Docker Compose.
-Para instalar o Docker e o Docker Compose siga as instruções abaixo.
+### Docker e Docker Compose
+Todo o backend foi containerizado utilizando Docker e Docker Compose.
+Para instalar o Docker e o Docker Compose, siga as instruções abaixo.
 
 #### Linux (Ubuntu e derivados)
 - Faça o download do script de instalação do Docker Engine
