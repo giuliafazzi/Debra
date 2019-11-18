@@ -37,7 +37,7 @@ Ou, para executar em background:
 ```
 sudo docker-compose up -d
 ```
-Quando executado em background, utilize o seguinte comando para interromper a execução:
+Quando executada em background, utilize o seguinte comando para interromper a execução:
 ```
 sudo docker-compose stop
 ```
