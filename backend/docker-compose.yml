@@ -24,7 +24,7 @@ services:
       - db
     command: npm start
     ports:
-      - 3331:3000
+      - 3000:3000
     # networks:
     #   - bridge2
     # uncomment to run in develop environment
