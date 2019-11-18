@@ -29,7 +29,7 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-
 ```
 sudo docker-compose -f docker-compose-startdb.yml run --rm node
 ```
-- Agora sempre que quiser executar a aplicação, basta usar o comando:
+- Agora, sempre que quiser executar a aplicação basta usar o comando:
 ```
 sudo docker-compose up
 ```
