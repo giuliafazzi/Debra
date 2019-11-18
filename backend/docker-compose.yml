@@ -9,7 +9,7 @@ services:
     restart: always
     volumes:
       - ./docker/postgres:/var/lib/postgresql/data
-      # - .:/usr/app      uncomment to run in develop environment
+      - .:/usr/app
     ports:
       - 25432:5432
   
@@ -25,4 +25,4 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - .:/usr/app
+      # - .:/usr/app    #uncomment to run in develop environment
