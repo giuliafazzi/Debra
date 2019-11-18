@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 app.use(routes);
-// app.use(error);
+app.use(error);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);
