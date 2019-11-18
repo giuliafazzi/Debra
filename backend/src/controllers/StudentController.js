@@ -32,5 +32,19 @@ module.exports = {
         }
 
         return res.json(school.students);
+    },
+
+    async show(req, res) {
+        const { school_id, student_id } = req.params;
+
+        const student = await Student.findByPk(student_id);
+        
+        if (!student) {
+            return res.status(404).json({ error: 'Student not found' });
+        } else if (student['school_id'] != school_id) {
+            return res.status(400).json({ error: 'Student does not belong to this school' });
+        }
+
+        return res.json(student);
     }
 }
