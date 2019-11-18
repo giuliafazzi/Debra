@@ -41,3 +41,5 @@ Quando executada em background, utilize o seguinte comando para interromper a ex
 ```
 sudo docker-compose stop
 ```
+
+>O banco de dados também ficará acessível em: *postgres://\<user\>:\<pass\>@localhost:25432/debra*
