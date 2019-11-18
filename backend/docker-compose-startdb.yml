@@ -20,6 +20,8 @@ services:
       - db
     depends_on:
       - db
-    command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; npm start'
+    command: npm run startdb
     volumes:
       - .:/usr/app
+    environment:
+      WAIT_HOSTS: db:5432
