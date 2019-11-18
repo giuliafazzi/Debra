@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { RestApiService } from '../rest-api.service';
 import { ActivatedRoute, Router } from '@angular/router'
@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router'
   templateUrl: "evolucao.page.html",
   styleUrls: ["evolucao.page.scss"]
 })
+
 export class EvolucaoPage {
   publi_cat_atv: any;
   publi_cat_aprende: any;
@@ -48,6 +49,14 @@ export class EvolucaoPage {
   }
 
   ngOnInit() {
+    this.getPosts();
+  }
+
+  ngAfterViewInit() {
+    this.getPosts();
+  }
+
+  ngOnChanges() {
     this.getPosts();
   }
 }

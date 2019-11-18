@@ -12,6 +12,8 @@ services:
       - .:/usr/app
     ports:
       - 25432:5432
+    # networks:
+    #   - bridge2
   
   node:
     container_name: node_container
@@ -22,7 +24,13 @@ services:
       - db
     command: npm start
     ports:
-      - 3000:3000
+      - 3331:3000
+    # networks:
+    #   - bridge2
     # uncomment to run in develop environment
-    volumes:
-    - .:/usr/app
+    # volumes:
+    # - .:/usr/app
+  
+# networks:
+#   bridge2:
+#     external: true
