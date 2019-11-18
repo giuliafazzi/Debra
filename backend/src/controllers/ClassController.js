@@ -6,7 +6,7 @@ module.exports = {
         const { school_id } = req.params;
         const { year, letter } = req.body;
         
-        const school = School.findByPk(school_id);
+        const school = await School.findByPk(school_id);
 
         if (!school) {
             return res.status(404).json({ error: 'School not found' });
