@@ -39,10 +39,10 @@ const routes: Routes = [
     loadChildren: () =>
       import("./evolucao/evolucao.module").then(m => m.EvolucaoPageModule)
   },
-  { path: 'publicacao', loadChildren: './publicacao/publicacao.module#PublicacaoPageModule' },
+  { path: 'escolas/:escola_id/alunos/:aluno_id/evolucao/publicacao', loadChildren: './publicacao/publicacao.module#PublicacaoPageModule' },
   { path: 'escolas/:escola_id/alunos/:aluno_id/infos', loadChildren: './infos/infos.module#InfosPageModule' },
   { path: 'addescolas', loadChildren: './addescolas/addescolas.module#AddescolasPageModule' },
-  { path: 'categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
+  { path: 'escolas/:escola_id/alunos/:aluno_id/evolucao/categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
   { path: 'esqueceusenha', loadChildren: './esqueceusenha/esqueceusenha.module#EsqueceusenhaPageModule' }
 ];
 

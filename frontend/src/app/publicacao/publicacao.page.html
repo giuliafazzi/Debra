@@ -9,8 +9,8 @@
 </ion-header>
 
 <ion-content>
-      <ion-input [(ngModel)]="text" placeholder="Escrever publicação" class="frm"></ion-input>
-    <button ion-button class="btn btnRoxo btnForm">
+      <ion-input [(ngModel)]="data.content" placeholder="Escrever publicação" class="frm"></ion-input>
+    <button ion-button class="btn btnRoxo btnForm" (click)="createPost()">
       Publicar
     </button>
 
