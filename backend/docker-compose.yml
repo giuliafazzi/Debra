@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: pg_container
+    env_file:
+      - .env
+    image: postgres
+    restart: always
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+      - .:/usr/app
+    ports:
+      - 25432:5432
+  
+  node:
+    container_name: node_container
+    build: .
+    image: node
+    links:
+      - db
+    depends_on:
+      - db
+    command: npm start
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/app
