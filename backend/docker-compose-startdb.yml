@@ -21,7 +21,5 @@ services:
     depends_on:
       - db
     command: npm run startdb
-    volumes:
-      - .:/usr/app
     environment:
       WAIT_HOSTS: db:5432
