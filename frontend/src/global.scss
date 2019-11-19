@@ -76,7 +76,7 @@ ion-title,
 }
 
 ion-card {
-  padding: 40px 30px 40px 30px;
+  padding: 30px;
   border-radius: 1em !important;
   white-space: normal;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25);
@@ -121,7 +121,8 @@ hr {
 
 .item-ios.item-block .item-inner,
 .item-block .item-inner,
-.item-inner {
+.item-inner,
+.sc-ion-card-md-h {
   border: none !important;
 }
 
@@ -169,7 +170,7 @@ h4 {
   font-weight: 400;
   color: #4f4f4f;
   font-size: 22px;
-  margin: 10% 20% 5% 20%;
+  margin: 10% 10% 0 10%;
 }
 
 .info {
@@ -201,7 +202,7 @@ h4 {
 .textoPost {
   font-size: 18px !important;
   margin-top: 20px !important;
-  margin-bottom: 20px !important;
+  margin-bottom: 10px !important;
 }
 
 #nomeAluno {

@@ -11,26 +11,29 @@
 </ion-header>
 
 <ion-content class="fundoCinza">
-  <ion-buttons slot="fixed" class="adicionar" routerLink="/escolas/{{escola_id}}/alunos/{{aluno_id}}/evolucao/categorias"></ion-buttons>
+  <ion-buttons
+    slot="fixed"
+    class="adicionar"
+    routerLink="/escolas/{{escola_id}}/alunos/{{aluno_id}}/evolucao/categorias"
+  >
     <p>+</p>
   </ion-buttons>
 
   <h4>Atividades executadas:</h4>
 
   <!-- FALTA ALINHAR À ESQUERDA -->
-  <ion-list>
-    <ion-item *ngFor="let pub of publi_cat_atv" class="fundoCinza">
+  <ion-list lines="none">
+    <ion-item *ngFor="let pub of publi_cat_atv" class="fundoCinza itm">
       <ion-card>
         <h3 class="card-title nomeProf">
           Maria Rosa Almeida
         </h3>
         <h2 class="card-subtitle">
-          {{pub.createdAt}}
+          {{pub.createdAt | date: 'dd/MM/yyyy'}}
         </h2>
         <h3 class="card-title textoPost">
           {{pub.content}}
         </h3>
-        <hr />
         <!-- INSERIR ÍCONES DE CATEGORIA -->
         <!-- SE FOR UM POST FAVORITADO: ios-star -->
         <!-- SE NÃO FOR UM POST FAVORITADO: ios-star-outline -->
@@ -39,19 +42,18 @@
   </ion-list>
 
   <h4>Aprende melhor com:</h4>
-  <ion-list>
-    <ion-item *ngFor="let pub of publi_cat_aprende" class="fundoCinza">
+  <ion-list lines="none">
+    <ion-item *ngFor="let pub of publi_cat_aprende" class="fundoCinza itm">
       <ion-card>
         <h3 class="card-title nomeProf">
           Maria Rosa Almeida
         </h3>
         <h2 class="card-subtitle">
-          {{pub.createdAt}}
+          {{pub.createdAt | date: 'dd/MM/yyyy'}}
         </h2>
         <h3 class="card-title textoPost">
           {{pub.content}}
         </h3>
-        <hr />
       </ion-card>
     </ion-item>
   </ion-list>

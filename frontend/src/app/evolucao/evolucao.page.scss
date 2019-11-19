@@ -1,5 +1,5 @@
 ion-title {
-  width: 100%;
+  width: 80%;
   height: 56px;
 }
 
@@ -18,4 +18,16 @@ ion-title {
   text-align: center;
   font-size: 30px;
   color: white;
+}
+
+ion-card {
+  width: 100%;
+}
+
+.nomeProf {
+  margin-bottom: 5px;
+}
+
+.card-subtitle {
+  margin-top: 0;
 }
