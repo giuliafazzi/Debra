@@ -1,24 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
-    
+  <ion-toolbar color="#9024a3">
     <ion-title>
       Escolas
     </ion-title>
 
     <!-- IDEIA: COLOCAR UM BOTÃO REDONDO COMO NA TELA DE POSTS -->
-    
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="fundoCinza">
-    <ion-buttons slot="fixed" class="adicionar" routerLink="/addescolas">+</ion-buttons>
+  <ion-buttons slot="fixed" class="adicionar" routerLink="/addescolas"
+    ><p>+</p></ion-buttons
+  >
 
   <ion-list>
-    <ion-item *ngFor="let esc of escolas" class="fundoCinza" routerLink="/escolas/{{esc.id}}/alunos">
-      <ion-card>
+    <ion-item
+      *ngFor="let esc of escolas"
+      class="fundoCinza"
+      routerLink="/escolas/{{esc.id}}/alunos"
+      class="lst-item"
+    >
+      <ion-card class="crd">
         <h3 class="card-title">
           {{esc.name}}
         </h3>
@@ -29,5 +31,3 @@
     </ion-item>
   </ion-list>
 </ion-content>
-
-Escola Estadual Professora Julia Rios Athayde

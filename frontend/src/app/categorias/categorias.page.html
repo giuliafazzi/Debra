@@ -1,24 +1,28 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
-      </ion-buttons>
-  
-      <ion-title>
-        Categorizar
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
-  
-    <ion-list>
-        <ion-item [routerLink]="['/escolas', escola_id, 'alunos', aluno_id, 'evolucao', 'publicacao']" [queryParams]="{categoria: 'atividades executadas'}">
-          <ion-label>Atividades executadas</ion-label>
-        </ion-item>
-        <ion-item [routerLink]="['/escolas', escola_id, 'alunos', aluno_id, 'evolucao', 'publicacao']" [queryParams]="{categoria: 'aprende melhor com'}">
-          <ion-label>Aprende melhor com</ion-label>
-        </ion-item>                    
-    </ion-list>
-  </ion-content>
-  
+  <ion-toolbar color="#9024a3">
+    <ion-buttons slot="start">
+      <ion-back-button color="white"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Categorizar
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      [routerLink]="['/escolas', escola_id, 'alunos', aluno_id, 'evolucao', 'publicacao']"
+      [queryParams]="{categoria: 'atividades executadas'}"
+    >
+      <ion-label>Atividades executadas</ion-label>
+    </ion-item>
+    <ion-item
+      [routerLink]="['/escolas', escola_id, 'alunos', aluno_id, 'evolucao', 'publicacao']"
+      [queryParams]="{categoria: 'aprende melhor com'}"
+    >
+      <ion-label>Aprende melhor com</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -64,11 +64,13 @@ ion-content {
 */
 ion-header,
 ion-toolbar {
+  color: white;
   background-color: #9024a3;
 }
 
 ion-title,
-.toolbar-title {
+.toolbar-title,
+.button-inner.sc-ion-back-button-md {
   background-color: #9024a3;
   color: #ffffff;
 }
@@ -111,12 +113,16 @@ hr {
     (botões, caixas de texto, checkbox...)
 */
 .list-ios > .item-block:last-child,
-.list-ios > .item-wrapper:last-child .item-block {
+.list-ios > .item-wrapper:last-child .item-block,
+.list-md > .item-block,
+.list-md > .item-wrapper {
   border: none;
 }
 
-.item-ios.item-block .item-inner {
-  border: none;
+.item-ios.item-block .item-inner,
+.item-block .item-inner,
+.item-inner {
+  border: none !important;
 }
 
 .frm {

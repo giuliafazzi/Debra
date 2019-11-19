@@ -1,9 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="#9024a3">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button color="white"></ion-back-button>
     </ion-buttons>
-
     <ion-title>
       Cadastrar
     </ion-title>
@@ -14,8 +13,8 @@
   <h4>Insira seus dados para se cadastrar no sistema</h4>
 
   <div>
-  <ion-input [(ngModel)]="name" placeholder="Nome*" class="frm"></ion-input>
-</div>  
+    <ion-input [(ngModel)]="name" placeholder="Nome*" class="frm"></ion-input>
+  </div>
 
   <ion-input
     [(ngModel)]="username"
@@ -23,24 +22,23 @@
     class="frm"
   ></ion-input>
 
-
   <ion-input
     class="frm"
+    name="pss"
     type="password"
-    [(ngModel)]="password"
+    ngModel
     placeholder="Senha*"
   ></ion-input>
 
-
   <ion-input
     class="frm"
+    name="pss-confirm"
     type="password"
-    [(ngModel)]="password"
+    ngModel
     placeholder="Repita sua senha*"
   ></ion-input>
-  
 
   <button ion-button class="btn btnRoxo btnForm" routerLink="/escolas">
-    Cadastre
+    Cadastre-se
   </button>
 </ion-content>

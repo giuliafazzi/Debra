@@ -1,18 +1,30 @@
-ion-title{
-    width: 100%;
-    height: 56px;
+ion-title {
+  width: 100%;
+  height: 56px;
 }
 
-.adicionar{
-    position: relative;
-    left: 70%;
-    top: 75%;
-    color: white;
-    font-size: 50px;
-    border: 1px solid #9024a3;
-    border-radius: 100px;
-    height: 70px;
-    width: 70px;
-    background-color: #9024a3;
-    padding-left: 18px;
+.adicionar {
+  position: absolute;
+  right: 10px;
+  bottom: 70px;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  background-color: #9024a3;
+}
+
+.adicionar p {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
+
+.crd {
+  width: 95%;
+}
+
+.lst-item,
+.item-inner {
+  border: none !important;
 }

@@ -1,24 +1,25 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+  <ion-toolbar color="#9024a3">
+    <ion-buttons slot="start">
+      <ion-back-button color="white"></ion-back-button>
+    </ion-buttons>
     <ion-title>Informações</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
   <h4 id="nomeAluno" (ngModel)="aluno?.name">{{aluno?.name}}</h4>
-  <p class="sub" (ngModel)="aluno?.disability">Aluno com {{aluno?.disability}}</p>
-  <p class="info" (ngModel)="aluno?.age">Idade: {{aluno?.age}} anos | Turma: {{aluno?.class.year}}º {{aluno?.class.letter}}</p>
-  
-  
+  <p class="sub" (ngModel)="aluno?.disability">
+    Aluno com {{aluno?.disability}}
+  </p>
+  <p class="info" (ngModel)="aluno?.age">
+    Idade: {{aluno?.age}} anos | Turma: {{aluno?.class.year}}º
+    {{aluno?.class.letter}}
+  </p>
+
   <h6 (ngModel)="aluno?.comments">Observações:</h6>
   <p class="obs" (ngModel)="aluno?.comments">{{aluno?.comments}}</p>
-  
+
   <h6>Laudo Médico:</h6>
   <p class="obs" (ngModel)="aluno?.medical_report">{{aluno?.medical_report}}</p>
-  
-
 </ion-content>

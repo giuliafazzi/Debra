@@ -1,17 +1,21 @@
 <ion-header>
-  <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button></ion-back-button>
-        </ion-buttons>
+  <ion-toolbar color="#9024a3">
+    <ion-buttons slot="start">
+      <ion-back-button color="white"></ion-back-button>
+    </ion-buttons>
 
     <ion-title>Publicação</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-      <ion-input [(ngModel)]="data.content" placeholder="Escrever publicação" class="frm"></ion-input>
-    <button ion-button class="btn btnRoxo btnForm" (click)="createPost()">
-      Publicar
-    </button>
-
+  <ion-textarea
+    rows="5"
+    [(ngModel)]="data.content"
+    placeholder="Escrever publicação"
+    class="frm"
+  ></ion-textarea>
+  <button ion-button class="btn btnRoxo btnForm" (click)="createPost()">
+    Publicar
+  </button>
 </ion-content>
