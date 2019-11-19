@@ -6,6 +6,7 @@ ion-title {
 h6 {
   text-align: left;
   margin-left: 20px;
+  color: #4f4f4f;
 }
 
 .obs {
@@ -13,4 +14,11 @@ h6 {
   font-size: 15px;
   text-align: left;
   margin-left: 20px;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #8c8c8c;
+  width: 90%;
 }

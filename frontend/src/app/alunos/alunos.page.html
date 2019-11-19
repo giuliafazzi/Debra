@@ -10,18 +10,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-item>
+  <ion-item lines="none">
     <ion-input placeholder="Procurar" class="frm" id="txtProc"></ion-input>
   </ion-item>
 
-  <ion-list>
+  <ion-list lines="none">
     <ion-item
       *ngFor="let alu of alunos"
       routerLink="/escolas/{{escola_id}}/alunos/{{alu.id}}"
     >
       <ion-label
-        >{{alu.name}} {{alu.class.year}}º{{alu.class.letter}}</ion-label
-      >
+        >{{alu.name}} {{alu.class.year}}º{{alu.class.letter}}
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

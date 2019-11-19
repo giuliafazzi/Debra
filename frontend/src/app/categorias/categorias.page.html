@@ -11,13 +11,14 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+  <ion-list lines="none">
     <ion-item
       [routerLink]="['/escolas', escola_id, 'alunos', aluno_id, 'evolucao', 'publicacao']"
       [queryParams]="{categoria: 'atividades executadas'}"
     >
       <ion-label>Atividades executadas</ion-label>
     </ion-item>
+    <hr />
     <ion-item
       [routerLink]="['/escolas', escola_id, 'alunos', aluno_id, 'evolucao', 'publicacao']"
       [queryParams]="{categoria: 'aprende melhor com'}"
