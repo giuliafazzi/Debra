@@ -11,12 +11,12 @@
 
 <ion-content>
   <ion-item lines="none">
-    <ion-input placeholder="Procurar" class="frm" id="txtProc"></ion-input>
+    <ion-input placeholder="Procurar" class="frm" id="txtProc" [(ngModel)]="nome" (ngModelChange)="filtrarNomes()"></ion-input>
   </ion-item>
 
   <ion-list lines="none">
     <ion-item
-      *ngFor="let alu of alunos"
+      *ngFor="let alu of alunos_filtro"
       routerLink="/escolas/{{escola_id}}/alunos/{{alu.id}}"
     >
       <ion-label
