@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="#9024a3">
+    <ion-title>
+      Escolas
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-icon name="options"></ion-icon>
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-router-outlet id="content1"></ion-router-outlet>
+<ion-content class="fundoCinza">
+  <ion-buttons slot="fixed" class="adicionar" routerLink="/addescolas"
+    ><p>+</p></ion-buttons
+  >
+
+  <ion-list lines="none">
+    <ion-item
+      *ngFor="let esc of escolas"
+      class="fundoCinza"
+      routerLink="/escolas/{{esc.id}}/alunos"
+      class="lst-item"
+    >
+      <ion-card class="crd">
+        <h3 class="card-title">
+          {{esc.name}}
+        </h3>
+        <h2 class="card-subtitle">
+          {{esc.city}}/{{esc.state}}
+        </h2>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -23,6 +23,13 @@ const routes: Routes = [
       import("./escolas/escolas.module").then(m => m.EscolasPageModule)
   },
   {
+    path: "escolas-filtros",
+    loadChildren: () =>
+      import("./escolas-filtros/escolas-filtros.module").then(
+        m => m.EscolasFiltrosPageModule
+      )
+  },
+  {
     path: "escolas/:escola_id/alunos",
     loadChildren: () =>
       import("./alunos/alunos.module").then(m => m.AlunosPageModule)
@@ -39,16 +46,31 @@ const routes: Routes = [
     loadChildren: () =>
       import("./evolucao/evolucao.module").then(m => m.EvolucaoPageModule)
   },
-  { path: 'escolas/:escola_id/alunos/:aluno_id/evolucao/publicacao', loadChildren: './publicacao/publicacao.module#PublicacaoPageModule' },
-  { path: 'escolas/:escola_id/alunos/:aluno_id/infos', loadChildren: './infos/infos.module#InfosPageModule' },
-  { path: 'addescolas', loadChildren: './addescolas/addescolas.module#AddescolasPageModule' },
-  { path: 'escolas/:escola_id/alunos/:aluno_id/evolucao/categorias', loadChildren: './categorias/categorias.module#CategoriasPageModule' },
-  { path: 'esqueceusenha', loadChildren: './esqueceusenha/esqueceusenha.module#EsqueceusenhaPageModule' }
+  {
+    path: "escolas/:escola_id/alunos/:aluno_id/evolucao/publicacao",
+    loadChildren: "./publicacao/publicacao.module#PublicacaoPageModule"
+  },
+  {
+    path: "escolas/:escola_id/alunos/:aluno_id/infos",
+    loadChildren: "./infos/infos.module#InfosPageModule"
+  },
+  {
+    path: "addescolas",
+    loadChildren: "./addescolas/addescolas.module#AddescolasPageModule"
+  },
+  {
+    path: "escolas/:escola_id/alunos/:aluno_id/evolucao/categorias",
+    loadChildren: "./categorias/categorias.module#CategoriasPageModule"
+  },
+  {
+    path: "esqueceusenha",
+    loadChildren: "./esqueceusenha/esqueceusenha.module#EsqueceusenhaPageModule"
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]
 })
