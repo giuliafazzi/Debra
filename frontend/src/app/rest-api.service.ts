@@ -52,6 +52,13 @@ export class RestApiService {
       .pipe(map(this.extractData), catchError(this.handleError));
   }
 
+  getClasses(school_id: string): Observable<any> {
+    const url = `${apiUrl}/schools/${school_id}/classes`;
+    return this.http
+      .get(url, httpOptions)
+      .pipe(map(this.extractData), catchError(this.handleError));
+  }
+
   getStudentById(school_id: string, student_id: string): Observable<any> {
     const url = `${apiUrl}/schools/${school_id}/students/${student_id}`;
     console.log(`ESCOLA_ID: ${school_id}  -  ALUNO_ID: ${student_id}`);

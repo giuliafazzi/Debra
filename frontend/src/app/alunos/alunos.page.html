@@ -11,7 +11,13 @@
 
 <ion-content>
   <ion-item lines="none">
-    <ion-input placeholder="Procurar" class="frm" id="txtProc" [(ngModel)]="nome" (ngModelChange)="filtrarNomes()"></ion-input>
+    <ion-input
+      placeholder="Procurar"
+      class="frm"
+      id="txtProc"
+      [(ngModel)]="nome"
+      (ngModelChange)="filtrarNomes()"
+    ></ion-input>
   </ion-item>
 
   <ion-list lines="none">
