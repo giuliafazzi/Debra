@@ -5,25 +5,25 @@
     </ion-buttons>
 
     <ion-title>
-      Aluno
+      Escola
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h4 id="nomeAluno">Nome</h4>
+  <h4 id="nomeEscola">Nome da escola</h4>
   <p class="sub">
-    Aluno com
+    Código: abc1234
   </p>
   <p class="info" (ngModel)="aluno?.age">
-    Idade: 9 anos | Turma: 5º A
+    21 alunos com necessidades especiais
   </p>
 
-  <button ion-button class="btn btnBranco btnForm">
-    Informações gerais
+  <button ion-button class="btn btnBranco btnForm" routerLink="/verprofessores">
+    Visualizar professores
   </button>
 
-  <button ion-button class="btn btnRoxo">
-    Evolução escolar
+  <button ion-button class="btn btnRoxo" routerLink="/veralunos">
+    Visualizar alunos
   </button>
 </ion-content>

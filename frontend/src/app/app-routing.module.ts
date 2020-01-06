@@ -65,7 +65,15 @@ const routes: Routes = [
   {
     path: "esqueceusenha",
     loadChildren: "./esqueceusenha/esqueceusenha.module#EsqueceusenhaPageModule"
-  }
+  },
+  { path: 'addcescola', loadChildren: './addcescola/addcescola.module#AddcescolaPageModule' },
+  { path: 'criarescola', loadChildren: './criarescola/criarescola.module#CriarescolaPageModule' },
+  { path: 'perfilescola', loadChildren: './perfilescola/perfilescola.module#PerfilescolaPageModule' },
+  { path: 'verprofessores', loadChildren: './verprofessores/verprofessores.module#VerprofessoresPageModule' },
+  { path: 'veralunos', loadChildren: './veralunos/veralunos.module#VeralunosPageModule' },
+  { path: 'perfilalunov', loadChildren: './perfilalunov/perfilalunov.module#PerfilalunovPageModule' },
+  { path: 'infosv', loadChildren: './infosv/infosv.module#InfosvPageModule' },
+  { path: 'addaluno', loadChildren: './addaluno/addaluno.module#AddalunoPageModule' }
 ];
 
 @NgModule({

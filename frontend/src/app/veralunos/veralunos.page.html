@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="#9024a3">
+    <ion-buttons slot="start">
+      <ion-back-button color="white"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Alunos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-buttons slot="fixed" class="adicionar" routerLink="/addaluno"
+    ><p>+</p></ion-buttons
+  >
+
+  <ion-item lines="none">
+    <ion-input
+      placeholder="Procurar"
+      class="frm"
+      id="txtProc"
+      [(ngModel)]="nome"
+      (ngModelChange)="filtrarNomes()"
+    >
+    </ion-input>
+  </ion-item>
+
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label routerLink="/perfilalunov">André</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Cláudia</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Danielle</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>Juliana</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

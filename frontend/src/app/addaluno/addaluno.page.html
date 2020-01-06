@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="#9024a3">
+    <ion-buttons slot="start">
+      <ion-back-button color="white"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Cadastrar novo aluno
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h4>Insira os dados para cadastrar um aluno no sistema</h4>
+
+  <ion-input
+    class="frm"
+    name="nomeAluno"
+    ngModel
+    placeholder="Nome do aluno*"
+  ></ion-input>
+
+  <ion-input
+    class="frm"
+    name="cdEscola"
+    ngModel
+    placeholder="Cidade*"
+  ></ion-input>
+
+  <ion-input
+    class="frm"
+    name="estEscola"
+    ngModel
+    placeholder="Estado*"
+  ></ion-input>
+
+  <button ion-button class="btn btnRoxo btnForm" routerLink="/escolas">
+    Cadastrar aluno
+  </button>
+</ion-content>
